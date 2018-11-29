@@ -16,7 +16,7 @@ if random.randint(0, 1) == 0:
             break
         if ur_choice + '\n' in cities:
             if ur_choice + '\n' not in done:
-                done.append(ur_choice)
+                done.append(ur_choice + '\n')
                 score += 1
                 print('Ваш счёт:', score)
             else:
@@ -45,7 +45,7 @@ else:
             break
         if ur_choice + '\n' in cities:
                 if ur_choice + '\n' not in done:
-                    done.append(ur_choice)
+                    done.append(ur_choice + '\n')
                     score =+ 1
                     print('Ваш счёт:', score)
                 else: print('Этот город уже был')
@@ -54,7 +54,7 @@ else:
         for elem in cities:
             if ch == elem[0]:
                 city = elem
-                if city + '\n' not in done:
+                if city not in done:
                     done.append(city)
                     print('Ход компьютера: ', city)
                     break
