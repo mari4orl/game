@@ -1,6 +1,6 @@
 import random
-print('Игра в города')
-#base = open('C:\\Users\\test\Downloads\\Baza_gorodov.txt')
+print('Игра в города \n'
+      'Если хотите закончить игру, напишите "стап ит!"')
 base = open('Baza.txt')
 done = []
 score = 0
@@ -11,6 +11,9 @@ if random.randint(0, 1) == 0:
     done.append(city)
     while True:
         ur_choice = input('Введите город с заглавной буквы: ')
+        if ur_choice == 'стап ит!':
+            print('Игра окончена')
+            break
         if ur_choice + '\n' in cities:
             if ur_choice + '\n' not in done:
                 done.append(ur_choice)
@@ -37,6 +40,9 @@ if random.randint(0, 1) == 0:
 else:
     while True:
         ur_choice = input('Введите город с заглавной буквы: ')
+        if ur_choice == 'стап ит!':
+            print('Игра окончена')
+            break
         if ur_choice + '\n' in cities:
                 if ur_choice + '\n' not in done:
                     done.append(ur_choice)
